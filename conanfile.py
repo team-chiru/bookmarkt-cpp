@@ -1,6 +1,6 @@
 from conans import ConanFile, CMake
 
-class PocoTimerConan(ConanFile):
+class SimpleConan(ConanFile):
    settings = "os", "compiler", "build_type", "arch"
    # requires = "Poco/1.7.3@lasote/stable" # comma separated list of requirements
 
