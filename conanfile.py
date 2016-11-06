@@ -1,6 +1,6 @@
 from conans import ConanFile, CMake
 
-class SimpleConan(ConanFile):
+class BookmarktConan(ConanFile):
    settings = "os", "compiler", "build_type", "arch"
    # requires = "Poco/1.7.3@lasote/stable" # comma separated list of requirements
 
