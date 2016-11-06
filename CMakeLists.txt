@@ -1,20 +1,21 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required ( VERSION 3.0.2 )
 
 ############################################################
 #### CONFIGURE CMAKE VARIABLES
 ############################################################
-set (PROJECT_NAME bookmarkt)
-set (CMAKE_MODULES ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules")
-set (SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
-set (BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build")
-set (BIN_DIR "${CMAKE_CURRENT_SOURCE_DIR}/bin")
+set ( PROJECT_NAME bookmarkt )
+set ( MODULES_DIR ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules" )
+set ( SOURCE_FILES "" )
+set ( SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src" )
+set ( BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build" )
+set ( BIN_DIR "${CMAKE_CURRENT_SOURCE_DIR}/bin" )
 
-project( ${PROJECT_NAME} )
+project ( ${PROJECT_NAME} )
 
 ############################################################
 #### INCLUDE CMAKE MODULES & SETUP
 ############################################################
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+include ( ${BUILD_DIR}/conanbuildinfo.cmake )
 conan_basic_setup()
 
 ############################################################
@@ -36,13 +37,13 @@ set_property ( GLOBAL PROPERTY USE_FOLDERS ON )
 ############################################################
 #### SET CONFIGURATION VARS
 ############################################################
-set( CMAKE_VERBOSE_MAKEFILE off )
+set ( CMAKE_VERBOSE_MAKEFILE off )
 set ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11" )
 
 ############################################################
 #### ADD SUBDIRECTORIES
 ############################################################
-add_subdirectory( ${SRC_DIR} )
+add_subdirectory ( ${SRC_DIR} )
 # add_subdirectory( tests )
 
 ############################################################
