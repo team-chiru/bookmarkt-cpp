@@ -1,0 +1,12 @@
+---
+BasedOnStyle: Mozilla
+IndentWidth: 4
+TabWidth: 4
+UseTab: Always
+AllowShortIfStatementsOnASingleLine: true
+BreakBeforeBraces: Attach
+---
+Language: Cpp
+# Force pointers to the type for C++.
+DerivePointerAlignment: false
+PointerAlignment: Left
